@@ -1,0 +1,153 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: var(--light-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-component {
+    background-color: var(--white);
+    width: 35%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    font-size: 3em;
+    margin-left: 0.5em;
+    display: inline-block;
+    color: var(--dark-purple);
+}
+
+#title-icon {
+    transform: scale(0.95);
+}
+
+.heading {
+    font-weight: 700;
+    color: var(--dark-purple);
+    margin-right: 3.5em;
+}
+
+.question-box {
+    position: relative;
+    border-bottom: 1px solid var(--light-pink);
+}
+
+.plus-icon,
+.minus-icon {
+    position: absolute;
+    right: 0.01em;
+    top: 0.8em;
+    cursor: pointer;
+}
+
+.vanish-content {
+    display: none;
+}
+
+.attribution {
+    position: absolute;
+    font-size: 11px;
+    text-align: center;
+    bottom: 0.1em;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+p {
+    color: var(--grayish-purple);
+}
+
+.no-border {
+    border: none;
+}
+
+@media (max-width:768px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    #title {
+        font-size: 2.5em;
+        margin-left: 0.2em;
+    }
+
+    #title-icon {
+        transform: scale(0.6);
+    }
+
+    #card-component {
+        width: 70%;
+        max-height: 90%;
+        padding: 1.5em;
+    }
+
+    .plus-icon,
+    .minus-icon {
+        right: 0.01em;
+        top: 0.4em;
+        transform: scale(0.7);
+    }
+
+}
+
+@media (max-width:425px) {
+
+    body {
+        font-size: 0.6em;
+    }
+
+    #title {
+        font-size: 2em;
+        margin-left: 0.1em;
+    }
+
+    #title-icon {
+        transform: scale(0.5);
+    }
+
+    #card-component {
+        width: 70%;
+        max-height: 70%;
+        padding: 1.5em;
+    }
+
+    .plus-icon,
+    .minus-icon {
+        right: 0.01em;
+        top: 0.2em;
+        transform: scale(0.7);
+    }
+
+
+}
